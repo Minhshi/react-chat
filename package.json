@@ -32,7 +32,8 @@
     "react-redux": "^6.0.0",
     "redux": "^4.0.1",
     "redux-logger": "^3.0.6",
-    "redux-promise": "^0.6.0"
+    "redux-promise": "^0.6.0",
+    "strftime": "^0.10.0"
   },
   "scripts": {
     "start": "webpack-dev-server --mode development",

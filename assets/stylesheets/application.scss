@@ -2,9 +2,42 @@ body {
   font-family: Helvetica;
 }
 
-#root {
+#root > div {
   height: 100vh;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  // align-items: center;
+  // justify-content: center;
 }
+
+.left-scene {
+  flex: 0 0 20%;
+  display: flex;
+  padding: 10px;
+  .logo {
+    flex: 0 0 20%;
+    border: 1px solid lightgrey;
+    padding: 10px;
+  }
+  .channels {
+    flex: 0 0 80%;
+    font-size: 16px;
+    font-weight: bold;
+    border: 1px solid lightgrey;
+    padding: 10px;
+  }
+}
+
+.right-scene {
+  flex: 0 0 80%;
+  border: 1px solid lightgrey;
+  margin: 10px;
+  padding: 10px;
+}
+
+.message-header > span {
+  font-weight: bold;
+  font-size: 16px;
+  color: #d104a8;
+}
+
+
