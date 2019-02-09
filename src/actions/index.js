@@ -36,3 +36,20 @@ export function selectedChannel(channel) {
     payload: channel
   };
 }
+
+export function createMessage(channel, author, content) {
+  const body = { author, content };
+  const url = `https://wagon-chat.herokuapp.com/${channel}/messages`;
+  const promise = fetch(url, {
+    method: "POST",
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(body)
+  }).then(response => response.json());
+  return {
+    type: "CREATE_MESSAGE",
+    payload: promise
+  };
+}

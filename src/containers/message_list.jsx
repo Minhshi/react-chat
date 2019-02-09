@@ -3,6 +3,7 @@ import Message from "../components/message";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 import { fetchMessages } from "../actions";
+import MessageForm from "./message_form";
 
 class MessageList extends React.Component {
   //   static defaultProps = {
@@ -31,10 +32,16 @@ class MessageList extends React.Component {
   render() {
     return (
       <div className="right-scene">
-        <h2>Channel #{this.props.selectedChannel}</h2>
-        {this.props.messages.map(message => {
-          return <Message message={message} key={message.id} />;
-        })}
+        <div className="message-list">
+          <h2>
+            Channel <span className="hash">#</span>
+            {this.props.selectedChannel}
+          </h2>
+          {this.props.messages.map(message => {
+            return <Message message={message} key={message.id} />;
+          })}
+        </div>
+        <MessageForm />
       </div>
     );
   }
