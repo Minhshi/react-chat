@@ -29,6 +29,16 @@ class MessageList extends React.Component {
     this.props.fetchMessages(this.props.selectedChannel);
   }
 
+  componentDidMount() {
+    this.interval = setInterval(() => {
+      this.props.fetchMessages(this.props.selectedChannel);
+    }, 3000);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.interval);
+  }
+
   render() {
     return (
       <div className="right-scene">
