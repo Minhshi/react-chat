@@ -46,4 +46,20 @@ body {
   color: #d104a8;
 }
 
+.message-form {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+}
 
+input {
+  width: 60%;
+  height: 33px;
+  border: 1px solid #d104a8;
+}
+
+.btn {
+  margin-left: 10px;
+  background-color: #d104a8;
+  color: white;
+}
