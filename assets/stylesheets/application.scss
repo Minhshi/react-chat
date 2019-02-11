@@ -16,22 +16,36 @@ body {
   .logo {
     flex: 0 0 20%;
     border: 1px solid lightgrey;
-    padding: 10px;
+    padding: 20px;
     img {
       height: 32px;
     }
   }
-  .channels {
+  .channels-container {
     flex: 0 0 80%;
-    font-size: 16px;
     font-weight: bold;
     border: 1px solid lightgrey;
-    padding: 10px;
+    padding-left: 10px;
   }
   span {
     color: #d104a8;
     padding: 4px;
   }
+}
+.channels-title {
+  border-bottom: 1px dashed lightgrey;
+}
+
+.channels-content {
+  padding-top: 20px;
+}
+
+.channel {
+  font-weight: lighter;
+}
+
+.channel.active {
+  font-weight: bold;
 }
 
 .right-scene {
@@ -66,6 +80,7 @@ body {
 .channel-content {
   overflow: scroll;
   height: 100%;
+  padding-top: 20px;
 }
 
 .message-form {
