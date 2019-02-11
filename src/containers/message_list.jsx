@@ -35,6 +35,10 @@ class MessageList extends React.Component {
     }, 3000);
   }
 
+  componentDidUpdate() {
+    this.messageList.scrollTop = this.messageList.scrollHeight;
+  }
+
   componentWillUnmount() {
     clearInterval(this.interval);
   }
@@ -42,16 +46,25 @@ class MessageList extends React.Component {
   render() {
     return (
       <div className="right-scene">
-        <div className="message-list">
-          <h2>
-            Channel <span className="hash">#</span>
-            {this.props.selectedChannel}
-          </h2>
-          {this.props.messages.map(message => {
-            return <Message message={message} key={message.id} />;
-          })}
+        <div className="channel-container">
+          <div className="channel-title">
+            <h2>
+              Channel <span className="hash">#</span>
+              {this.props.selectedChannel}
+            </h2>
+          </div>
+          <div
+            className="channel-content"
+            ref={messageList => {
+              this.messageList = messageList;
+            }}
+          >
+            {this.props.messages.map(message => {
+              return <Message message={message} key={message.id} />;
+            })}
+          </div>
+          <MessageForm />
         </div>
-        <MessageForm />
       </div>
     );
   }

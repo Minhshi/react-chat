@@ -32,6 +32,7 @@ body {
 
 .right-scene {
   flex: 0 0 80%;
+  flex-direction: column;
   border: 1px solid lightgrey;
   margin: 10px;
   padding: 10px;
@@ -40,22 +41,42 @@ body {
   }
 }
 
-.message-header > span {
+.channel-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.channel-title {
+  border-bottom: 1px dashed lightgrey;
+  display: flex;
+  align-items: center;
+}
+
+.message-author > span {
   font-weight: bold;
   font-size: 16px;
   color: #d104a8;
 }
 
+.channel-content {
+  overflow: scroll;
+  height: 100%;
+}
+
 .message-form {
-  position: absolute;
+  display: flex;
   bottom: 20px;
   width: 100%;
+  form {
+    width: 100%;
+  }
 }
 
 input {
-  width: 60%;
+  width: 90%;
   height: 33px;
-  border: 1px solid #d104a8;
+  border: 1px solid lightgrey;
 }
 
 .btn {

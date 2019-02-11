@@ -4,8 +4,8 @@ class Message extends React.Component {
   render() {
     const time = new Date(this.props.message.created_at).toLocaleTimeString();
     return (
-      <div className="message">
-        <div className="message-header">
+      <div className="message-container">
+        <div className="message-author">
           <span>{this.props.message.author}</span> - {time}
         </div>
         <div className="message-content">{this.props.message.content}</div>
