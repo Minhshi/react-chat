@@ -32,7 +32,7 @@ class MessageList extends React.Component {
   componentDidMount() {
     this.interval = setInterval(() => {
       this.props.fetchMessages(this.props.selectedChannel);
-    }, 3000);
+    }, 500);
   }
 
   componentDidUpdate() {
