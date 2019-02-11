@@ -38,7 +38,9 @@ class MessageForm extends React.Component {
             value={this.state.value}
             onChange={this.handleChange}
           />
-          <button type="text" value="Submit" className="btn btn-default">Submit</button>
+          <button type="text" value="Submit" className="btn btn-default">
+            Submit
+          </button>
         </form>
       </div>
     );
