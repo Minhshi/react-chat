@@ -37,7 +37,7 @@ const initialState = {
   messages: [],
   channels: ["general", "react", "paris"],
   selectedChannel: "general",
-  currentUser: `anonymous-${Math.floor(Math.random() * 10)}`
+  currentUser: prompt("What is your username?") || `anonymous-${Math.floor(Math.random() * 10)}`
 };
 
 // const root = document.getElementById('root');
